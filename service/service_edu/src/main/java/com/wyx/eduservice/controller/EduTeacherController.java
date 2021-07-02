@@ -14,6 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.PrintWriter;
 import java.util.List;
 
 /**
@@ -44,7 +45,8 @@ public class EduTeacherController {
 //        }catch(Exception e){
 //            throw new GuliException(20001,"执行了自定义异常处理");
 //        }
-
+        PrintWriter log = new PrintWriter(System.out,true);
+        log.println("Hello, Jack");
         return Response.success().data("teacherList",list);
     }
 

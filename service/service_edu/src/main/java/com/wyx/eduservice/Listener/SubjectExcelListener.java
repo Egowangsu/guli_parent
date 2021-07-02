@@ -20,7 +20,7 @@ public class SubjectExcelListener extends AnalysisEventListener<SubjectData> {
     public void invoke(SubjectData subjectData, AnalysisContext analysisContext) {
     //读取excel内容，一行一行进行读取
         if(subjectData == null){
-            throw new GuliException(20001,"文件数据为空");
+            throw new GuliException("20001","文件数据为空");
         }
 
         //判断一级分类是否存在

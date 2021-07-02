@@ -31,7 +31,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         BeanUtils.copyProperties(courseEntityVo, eduCourse);
         int count = baseMapper.insert(eduCourse);   //将数据存到course表中
         if(count == 0){
-            throw new GuliException(20001,"添加课程信息失败");
+            throw new GuliException("20001","添加课程信息失败");
         }
         EduCourseDescription eduCourseDescription = new EduCourseDescription();
         BeanUtils.copyProperties(courseEntityVo, eduCourseDescription);
